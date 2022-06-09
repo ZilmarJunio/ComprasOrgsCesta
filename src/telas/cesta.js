@@ -10,16 +10,22 @@ export default function Cesta() {
     <Image source={top} style={styles.top} />
     <Text style={styles.title}>Detalhes da Compra</Text>
 
-    <View>
-        <Text>Cesta de Verduras</Text>
-        <Text>Fazenda dú Zilmá</Text>
+    <View style={styles.cesta}>
+        <Text style={styles.name}>Cesta de Verduras</Text>
+        <Text style={styles.farmName}>Fazenda dú Zilmá</Text>
         <Text>Os melhores produtos selecionados cuidadosamente da fazenda para a sua cozinha, uai!</Text>
+        <Text>40R$</Text>
     </View>
 
     </>
 }
 
 const styles = StyleSheet.create({
+
+    cesta: {
+        paddingVertical: 8,
+        paddingHorizontal: 16
+    },
 
     top: {
         width: "100%",
@@ -31,9 +37,25 @@ const styles = StyleSheet.create({
         position: "absolute",
         textAlign: "center",
         fontSize: 16,
+        lineHeight: 16,
         color: "white",
         fontWeight: "bold",
         padding: 16
+    },
+
+    name: {
+        color: "#464646",
+        fontSize: 26,
+        lineHeight: 42,
+        fontWeight: "bold",
+    },
+
+    farmName: {
+        color:"#464646",
+        fontSize: 16,
+        lineHeight: 26,
+        fontWeight: "bold",
+
     }
 
 });
