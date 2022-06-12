@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Image, Dimensions, Text, View} from 'react-native';
 
-import top from '../../assets/topo.png';
+import top from '../../assets/topoZJ.jpg';
 
 const width = Dimensions.get('screen').width;
 
@@ -13,8 +13,9 @@ export default function Cesta() {
     <View style={styles.cesta}>
         <Text style={styles.name}>Cesta de Verduras</Text>
         <Text style={styles.farmName}>Fazenda dú Zilmá</Text>
-        <Text>Os melhores produtos selecionados cuidadosamente da fazenda para a sua cozinha, uai!</Text>
-        <Text>40R$</Text>
+        <Text style={styles.description}>Os melhores produtos selecionados cuidadosamente da fazenda para a sua cozinha, uai!</Text>
+        <Text>Your mom price:</Text>
+        <Text style={styles.preco}>40R$</Text>
     </View>
 
     </>
@@ -52,9 +53,24 @@ const styles = StyleSheet.create({
 
     farmName: {
         color:"#464646",
-        fontSize: 16,
-        lineHeight: 26,
+        fontSize: 18,
+        lineHeight: 40,
         fontWeight: "bold",
+
+    },
+
+    description: {
+        color: "black",
+        fontSize: 15,
+        fontWeight: "bold",
+        lineHeight: 26
+    },
+
+    preco:{
+
+        color: "green",
+        fontSize: 25,
+        fontWeight: "bold"
 
     }
 
