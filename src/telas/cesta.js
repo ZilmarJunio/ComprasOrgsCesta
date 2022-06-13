@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Image, Dimensions, Text, View} from 'react-native';
 
 import top from '../../assets/topoZJ.jpg';
+import logo from '../../assets/logo.png';
 
 const width = Dimensions.get('screen').width;
 
@@ -10,12 +11,18 @@ export default function Cesta() {
     <Image source={top} style={styles.top} />
     <Text style={styles.title}>Detalhes da Compra</Text>
 
-    <View style={styles.cesta}>
-        <Text style={styles.name}>Cesta de Verduras</Text>
+    <View style={styles.View1Prop}>
+
+            <View styles={styles.View2Prop}>
+                <Image source={logo} style={styles.logoFarm}/>
+                <Text style={styles.name}>Cesta de Verduras</Text>
+            </View>
+
         <Text style={styles.farmName}>Fazenda dú Zilmá</Text>
         <Text style={styles.description}>Os melhores produtos selecionados cuidadosamente da fazenda para a sua cozinha, uai!</Text>
         <Text>Your mom price:</Text>
         <Text style={styles.preco}>40R$</Text>
+
     </View>
 
     </>
@@ -23,7 +30,7 @@ export default function Cesta() {
 
 const styles = StyleSheet.create({
 
-    cesta: {
+    View1Prop: {
         paddingVertical: 8,
         paddingHorizontal: 16
     },
@@ -67,11 +74,20 @@ const styles = StyleSheet.create({
     },
 
     preco:{
-
         color: "green",
         fontSize: 25,
-        fontWeight: "bold"
+        fontWeight: "bold",
+        lineHeight: 42,
+        marginTop: 8,
+    },
 
+    View2Prop: {
+        flexDirection: "row",
+    },
+
+    logoFarm: {
+        width:32,
+        height:32,/**/
     }
 
 });
