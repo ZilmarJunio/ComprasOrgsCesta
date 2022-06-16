@@ -1,8 +1,8 @@
 import React from 'react';
 import {StyleSheet, Image, Dimensions, Text, View} from 'react-native';
 
-import top from '../../assets/topoZJ.jpg';
-import logo from '../../assets/logo.png';
+import top from '../../assets/hellen.jpeg';
+import logo from '../../assets/hellen.jpeg';
 
 const width = Dimensions.get('screen').width;
 
@@ -13,15 +13,14 @@ export default function Cesta() {
 
     <View style={styles.View1Prop}>
 
-            <View styles={styles.View2Prop}>
-                <Image source={logo} style={styles.logoFarm}/>
-                <Text style={styles.name}>Cesta de Verduras</Text>
-            </View>
-
-        <Text style={styles.farmName}>Fazenda dú Zilmá</Text>
-        <Text style={styles.description}>Os melhores produtos selecionados cuidadosamente da fazenda para a sua cozinha, uai!</Text>
-        <Text>Your mom price:</Text>
-        <Text style={styles.preco}>40R$</Text>
+        <View style={styles.fazenda}>
+            <Image source={logo} style={styles.logoFarm}/>
+            <Text style={styles.name}>Compre o seu Zilmar</Text>
+        </View>
+        <Text style={styles.farmName}>Me compra</Text>
+        <Text style={styles.description}>Hellen, eu te amo</Text>
+        <Text>promo</Text>
+        <Text style={styles.preco}>10.000 R$ (Preço do seguro)</Text>
 
     </View>
 
@@ -29,6 +28,11 @@ export default function Cesta() {
 }
 
 const styles = StyleSheet.create({
+
+    fazenda: {
+        flexDirection: "row",
+        paddingVertical: 26
+    },
 
     View1Prop: {
         paddingVertical: 8,
@@ -53,8 +57,8 @@ const styles = StyleSheet.create({
 
     name: {
         color: "#464646",
-        fontSize: 26,
-        lineHeight: 42,
+        fontSize: 14,
+        lineHeight: 20,
         fontWeight: "bold",
     },
 
@@ -79,10 +83,6 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         lineHeight: 42,
         marginTop: 8,
-    },
-
-    View2Prop: {
-        flexDirection: "row",
     },
 
     logoFarm: {
