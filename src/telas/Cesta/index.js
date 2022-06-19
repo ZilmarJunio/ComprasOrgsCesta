@@ -1,8 +1,8 @@
 import React from 'react';
 import {StyleSheet, Image, Dimensions, Text, View} from 'react-native';
 
-import top from '../../assets/hellen.jpeg';
-import logo from '../../assets/hellen.jpeg';
+import top from '../../../assets/topoZJ.jpg';
+import logo from '../../../assets/logo.png';
 
 const width = Dimensions.get('screen').width;
 
@@ -13,14 +13,15 @@ export default function Cesta() {
 
     <View style={styles.View1Prop}>
 
+        <Text style={styles.farmName}>Cesta de Verduras</Text>
+
         <View style={styles.fazenda}>
             <Image source={logo} style={styles.logoFarm}/>
-            <Text style={styles.name}>Compre o seu Zilmar</Text>
+            <Text style={styles.name}>Jenny Jack Farm</Text>
         </View>
-        <Text style={styles.farmName}>Me compra</Text>
-        <Text style={styles.description}>Hellen, eu te amo</Text>
-        <Text>promo</Text>
-        <Text style={styles.preco}>10.000 R$ (Preço do seguro)</Text>
+
+        <Text style={styles.description}>Produtos selecionados cuidadosamente da fazenda para sua cozinha!</Text>
+        <Text style={styles.preco}>R$ 40</Text>
 
     </View>
 
@@ -30,7 +31,7 @@ export default function Cesta() {
 const styles = StyleSheet.create({
 
     fazenda: {
-        flexDirection: "row",
+        flexDirection: "row", /*alinha os itens em sequencia, mesma linha - seu oposto é o column*/
         paddingVertical: 26
     },
 
@@ -58,14 +59,14 @@ const styles = StyleSheet.create({
     name: {
         color: "#464646",
         fontSize: 14,
-        lineHeight: 20,
+        lineHeight: 30,
         fontWeight: "bold",
     },
 
     farmName: {
         color:"#464646",
         fontSize: 18,
-        lineHeight: 40,
+        lineHeight: 18,
         fontWeight: "bold",
 
     },
@@ -73,8 +74,6 @@ const styles = StyleSheet.create({
     description: {
         color: "black",
         fontSize: 15,
-        fontWeight: "bold",
-        lineHeight: 26
     },
 
     preco:{
@@ -87,7 +86,7 @@ const styles = StyleSheet.create({
 
     logoFarm: {
         width:32,
-        height:32,/**/
+        height:32,
     }
 
 });
