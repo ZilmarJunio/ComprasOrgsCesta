@@ -1,15 +1,13 @@
 import React from 'react';
-import {StyleSheet, Image, Dimensions, Text, View} from 'react-native';
+import {StyleSheet, Image, Text, View} from 'react-native';
 
-import top from '../../../assets/topoZJ.jpg';
+import Topo from "./Cesta_Components/Topo"
 import logo from '../../../assets/logo.png';
-
-const width = Dimensions.get('screen').width;
 
 export default function Cesta() {
     return <>
-    <Image source={top} style={styles.top} />
-    <Text style={styles.title}>Detalhes da Compra</Text>
+
+    <Topo/>
 
     <View style={styles.View1Prop}>
 
@@ -38,23 +36,7 @@ const styles = StyleSheet.create({
     View1Prop: {
         paddingVertical: 8,
         paddingHorizontal: 16
-    },
-
-    top: {
-        width: "100%",
-        height: 578 / 768 * width,
-    },
-
-    title: {
-        width: "100%",
-        position: "absolute",
-        textAlign: "center",
-        fontSize: 16,
-        lineHeight: 16,
-        color: "white",
-        fontWeight: "bold",
-        padding: 16
-    },
+    },    
 
     name: {
         color: "#464646",
