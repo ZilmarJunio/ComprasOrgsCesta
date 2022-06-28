@@ -1,5 +1,5 @@
 import React from "react";
-import { Image , Dimensions} from "react-native";
+import { Image, Text, StyleSheet, Dimensions} from "react-native";
 
 import top from '../../../../assets/topoZJ.jpg';
 
@@ -7,12 +7,12 @@ const width = Dimensions.get('screen').width;
 
 export default function Topo(){
     return <>
-    <Image source={top} style={styles.top} />
-    <Text style={styles.title}>Detalhes da Compra</Text>
+        <Image source={top} style={styles.top} />
+        <Text style={styles.title}>Detalhes da Compra</Text>
     </>
 }
 
-const estilos = StyleSheet.create({
+const styles = StyleSheet.create({
 
     top: {
         width: "100%",
